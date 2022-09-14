@@ -1,0 +1,8 @@
+*.swp
+*.mu
+*.dds
+*.blend*
+*.mbm
+*.pyc
+__pycache__/
+test/

@@ -1,0 +1,120 @@
+PART {
+    name = A-Body
+    module = Part
+    author = yes
+    mesh = A-body.mu
+    rescaleFactor = 1
+    TechRequired = advFuelSystems
+    entryCost = 24200
+    cost = 5750
+    category = FuelTank
+    subcategory = 0
+    title = #autoLOC_500520
+    manufacturer = #autoLOC_501637
+    description = #autoLOC_500521
+    attachRules = 1,1,1,1,0
+    mass = 4
+    dragModelType = default
+    maximum_drag = 0.2
+    minimum_drag = 0.3
+    angularDrag = 2
+    crashTolerance = 6
+    breakingForce = 200
+    breakingTorque = 200
+    maxTemp = 2000
+    bulkheadProfiles = size2, srf
+    tags = #autoLOC_500522
+    RESOURCE {
+        name = LiquidFuel
+        amount = 2880
+        maxAmount = 2880
+}
+
+    RESOURCE {
+        name = Oxidizer
+        amount = 3520
+        maxAmount = 3520
+}
+
+    MODULE
+{
+    name = ModuleControlSurface
+    useInternalDragModel = True
+    dragCoeff = 0.6
+    deflectionLiftCoeff = 2.69 	// area = 9.48m^2
+    ctrlSurfaceRange = 35
+    ctrlSurfaceArea = 0.37 	// area = 3.45m^2
+    actuatorSpeed = 25
+    transformName = Flap1
+}
+    MODULE
+{
+    name = ModuleControlSurface
+    useInternalDragModel = True
+    dragCoeff = 0.6
+    deflectionLiftCoeff = 2.69 	// area = 9.48m^2
+    ctrlSurfaceRange = 35
+    ctrlSurfaceArea = 0.37 	// area = 3.45m^2
+    actuatorSpeed = 25
+    transformName = Flap2
+}
+    MODULE
+{
+    name = ModuleControlSurface
+    useInternalDragModel = True
+    dragCoeff = 0.6
+    deflectionLiftCoeff = 2.69 	// area = 9.48m^2
+    ctrlSurfaceRange = 35
+    ctrlSurfaceArea = 0.37 	// area = 3.45m^2
+    actuatorSpeed = 25
+    transformName = Flap1-R
+}
+    MODULE
+{
+    name = ModuleControlSurface
+    useInternalDragModel = True
+    dragCoeff = 0.6
+    deflectionLiftCoeff = 2.69 	// area = 9.48m^2
+    ctrlSurfaceRange = 35
+    ctrlSurfaceArea = 0.37 	// area = 3.45m^2
+    actuatorSpeed = 25
+    transformName = Flap2-R
+}
+
+    MODULE {
+        name = ModulePartVariants
+        baseVariant = BlackAndWhite
+        VARIANT {
+            name = BlackAndWhite
+            displayName = #autoLOC_8007122
+            themeName = White
+            primaryColor = #ffffff
+            secondaryColor = #000000
+            GAMEOBJECTS {
+                Rockomax_64_White = true
+                Rockomax_64_Orange = false
+        }
+
+    }
+
+        VARIANT {
+            name = Orange
+            displayName = #autoLOC_8007123
+            themeName = Orange
+            primaryColor = #f49841
+            secondaryColor = #4c4f47
+            GAMEOBJECTS {
+                Rockomax_64_White = false
+                Rockomax_64_Orange = true
+        }
+
+            TEXTURE {
+                mainTextureURL = Squad/Parts/FuelTank/RockomaxTanks/Assets/rockomax_16 [AlbedoM] O
+                _BumpMap = Squad/Parts/FuelTank/RockomaxTanks/Assets/rockomax_16 [Normal]O
+        }
+
+    }
+
+}
+
+}
